@@ -1,3 +1,19 @@
 spring:
   application:
     name: springweek
+
+  datasource:
+    url: "${spring_datasource_url}"
+    username: "${spring_datasource_username}"
+    password: "${spring_datasource_password}"
+    driver-class-name: "${spring_datasource_driver-class-name}"
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+
+    show-sql: true
+
